@@ -1,4 +1,6 @@
 import CareerList from '../components/Career/CareerList';
+
+import Scramble from 'react-scramble';
 import style from '../styles/indexPage.module.scss';
 
 const CareerListData: CareerList[] = [
@@ -246,11 +248,11 @@ const CareerListData: CareerList[] = [
     },
 ];
 
-const renderCareerList = (ele: CareerList) => (
-    <CareerList key={ele.listTitle} title={ele.listTitle} list={ele.list} />
-);
-
 export default function indexPage() {
+    const renderCareerList = (ele: CareerList) => (
+        <CareerList key={ele.listTitle} title={ele.listTitle} list={ele.list} />
+    );
+
     return (
         <div className={style.indexPage}>
             <div className={style.Main}>
@@ -276,7 +278,24 @@ export default function indexPage() {
                         </div>
                     </div>
                     <div className={style.layer__middle}>
-                        <p>PORTFOLIO</p>
+                        <p>
+                            <Scramble
+                                autoStart
+                                text='PORTPOLIO'
+                                steps={[
+                                    {
+                                        roll: 20,
+                                        action: '+',
+                                        type: 'all',
+                                    },
+                                    {
+                                        action: '-',
+                                        type: 'forward',
+                                    },
+                                ]}
+                                speed="medium"
+                            />
+                        </p>
                     </div>
                 </div>
             </div>
