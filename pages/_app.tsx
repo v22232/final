@@ -1,6 +1,12 @@
 import { AppProps } from 'next/app';
-import '../styles/globals.scss'
+import { AppShell } from '../components/common';
+
+import '../styles/globals.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />;
+    return (
+        <AppShell>
+            <Component {...pageProps} />
+        </AppShell>
+    );
 }
