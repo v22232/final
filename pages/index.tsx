@@ -259,7 +259,7 @@ export default function indexPage() {
                         <div>
                             <p>Info</p>
                             <ul>
-                                <li>bu hee kim</li>
+                                <li>bu hee Kim</li>
                                 <li>Publisher</li>
                                 <li>Font-end developer</li>
                                 <li>bettykim3771@gmail.com</li>
@@ -269,7 +269,7 @@ export default function indexPage() {
                             <p>Skills</p>
                             <ul>
                                 <li>CSS, SASS, SCSS</li>
-                                <li>HTML, HTML, JSP, Css, EJS</li>
+                                <li>HTML, HTML, JSP, EJS</li>
                                 <li>Node.js-Express, React</li>
                                 <li>JavaScript, TypeScript, jQuery</li>
                             </ul>

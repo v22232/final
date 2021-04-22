@@ -9,7 +9,7 @@ export default function CareerItem({ item }: Prop) {
     const { itemTitle, url, imgPath, etc } = item;
     return (
         <li className={style.CareerItem}>
-            <Link href={url} as={process.env.BACKEND_URL + url}>
+            <Link href={url}>
                 <a target='_blank' title='새창열림'>
                     <span>{itemTitle}</span>
                     {imgPath && (
