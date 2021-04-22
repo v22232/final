@@ -8,18 +8,18 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '한국 원자력 환경 공단',
                 url: 'https://www.korad.or.kr/korad/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/korad-01.png',
+                imgPath: '/images/korad-01.png',
             },
             {
                 itemTitle: '한국 원자력 환경 공단(영문)',
                 url: 'https://www.korad.or.kr/korad-eng/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/korad-02.png',
+                imgPath: '/images/korad-02.png',
             },
 
             {
                 itemTitle: '사용후핵연료 관리정책 재검토 위원회',
                 url: 'https://www.hlwpolicy.go.kr/hlwp/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/korad-03.png',
+                imgPath: '/images/korad-03.png',
                 etc: (
                     <>
                         <h3>한국 원자력 환경 공단</h3> <br />
@@ -36,27 +36,27 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '서울 정독 도서관',
                 url: 'https://jdlib.sen.go.kr/gnlib/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-00.png',
+                imgPath: '/images/lib-00.png',
             },
             {
                 itemTitle: '서울 강남 도서관',
                 url: 'https://gnlib.sen.go.kr/gnlib/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-01.png',
+                imgPath: '/images/lib-01.png',
             },
             {
                 itemTitle: '서울 구로 도서관',
                 url: 'https://grlib.sen.go.kr/grlib/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-02.png',
+                imgPath: '/images/lib-02.png',
             },
             {
                 itemTitle: '서울 마포평생학습관',
                 url: 'https://ahyon.sen.go.kr/ahyon/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-03.png',
+                imgPath: '/images/lib-03.png',
             },
             {
                 itemTitle: '서울 강서 도서관',
                 url: 'https://gslib.sen.go.kr/gslib/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-05.png',
+                imgPath: '/images/lib-05.png',
                 etc: (
                     <>
                         <h3>서울특별시 교육청 도서관</h3>
@@ -75,17 +75,17 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '인천 서구도서관',
                 url: 'https://ahyon.sen.go.kr/ahyon/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-ic-01.png',
+                imgPath: '/images/lib-ic-01.png',
             },
             {
                 itemTitle: '인천 연수도서관',
                 url: 'https://ahyon.sen.go.kr/ahyon/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-ic-02.png',
+                imgPath: '/images/lib-ic-02.png',
             },
             {
                 itemTitle: '인천 통합공공도서관',
                 url: 'https://ahyon.sen.go.kr/ahyon/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-ic-03.png',
+                imgPath: '/images/lib-ic-03.png',
                 etc: (
                     <>
                         <h3>인천광역시 교육청 도서관</h3>
@@ -104,12 +104,12 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '경상북도 교육청 정보센터',
                 url: 'http://www.gbelib.kr/geic/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-ks-01.png',
+                imgPath: '/images/lib-ks-01.png',
             },
             {
                 itemTitle: '경상북도 교육청 통합 공공 도서관',
                 url: 'http://www.gbelib.kr/gbelib/index.do',
-                imgPath: process.env.BACKEND_URL + '/images/lib-ks-02.png',
+                imgPath: '/images/lib-ks-02.png',
                 etc: (
                     <>
                         <h3>경상북도 교육청 도서관</h3>
@@ -137,7 +137,7 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '영플립(손샘영어)',
                 url: 'http://www.engflip.com',
-                imgPath: process.env.BACKEND_URL + '/images/academy-01.png',
+                imgPath: '/images/academy-01.png',
                 etc: (
                     <>
                         <h3>영플립</h3>
@@ -153,7 +153,7 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '<CMS> 영플립 브랜드 및 지점 관리',
                 url: '',
-                imgPath: process.env.BACKEND_URL + '/images/academy-03.png',
+                imgPath: '/images/academy-03.png',
                 etc: (
                     <>
                         <h3>영플립 CMS</h3>
@@ -169,7 +169,7 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '영플립 학생 교육',
                 url: '',
-                imgPath: process.env.BACKEND_URL + '/images/academy-04.png',
+                imgPath: '/images/academy-04.png',
                 etc: (
                     <>
                         <h3>손샘 영어/ 영플립</h3>
@@ -185,7 +185,7 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '<LMS> 영플립 학생 관리 ',
                 url: '',
-                imgPath: process.env.BACKEND_URL + '/images/academy-05.png',
+                imgPath: '/images/academy-05.png',
                 etc: (
                     <>
                         <h3>영플립 LMS</h3>
@@ -209,7 +209,7 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '머니트레이너',
                 url: 'http://moneytrainer.com',
-                imgPath: process.env.BACKEND_URL + '/images/money-01.png',
+                imgPath: '/images/money-01.png',
                 etc: (
                     <>
                         <h3>머니 트레이너</h3>
@@ -227,7 +227,7 @@ const CareerListData: CareerList[] = [
             {
                 itemTitle: '머니트레이너 관리자',
                 url: 'http://moneytrainer.com',
-                imgPath: process.env.BACKEND_URL + '/images/money-02.png',
+                imgPath: '/images/money-02.png',
                 etc: (
                     <>
                         <h3>머니 트레이너 관리자 페이지</h3>
