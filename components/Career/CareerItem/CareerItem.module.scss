@@ -1,0 +1,141 @@
+@import '../../../styles/color.scss';
+@import '../../../styles/common.scss';
+
+.CareerItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    word-break: keep-all;
+
+    a {
+        position: relative;
+        width: 100%;
+        height: auto;
+        transition: 0.2s ease;
+
+        span {
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            color: $gray;
+            padding: 5px 15px;
+            opacity: 0;
+            background-color: rgb(0 0 0 / 80%);
+            transform-origin: center;
+            transform: translate(-50%, -50%) rotateX(90deg);
+            transform-style: preserve-3d;
+            transition: all 0.35s;
+            z-index: 2;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .item__gray {
+            filter: grayscale(100%);
+        }
+
+        .item__gray_hover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 0.2s ease;
+            filter: grayscale(0%);
+        }
+
+        &:hover {
+            .item__gray_hover {
+                opacity: 1;
+                animation-duration: 0.7s;
+                animation-fill-mode: forwards;
+                animation-name: top;
+            }
+            span {
+                opacity: 1;
+                transform: translate(-50%, -50%) rotateX(0deg);
+            }
+        }
+    }
+
+    a ~ div {
+        width: 100%;
+        padding: 30px 20px;
+        background-color: rgb(99 99 99 / 38%);
+        color: $gray;
+
+        h3 {
+            display: inline-block;
+            width: auto;
+            z-index: 1;
+            &:after {
+                @include pseudo;
+                width: 100%;
+                left: -100%;
+                top: 9px;
+                height: 10px;
+                transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                background-color: yellow;
+                opacity: 0.4;
+                z-index: -1;
+            }
+        }
+
+        &:hover {
+            color: $white;
+            h3 {
+                &::before {
+                    background-color: $white;
+                }
+                &::after {
+                    left: 0px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes top {
+    from {
+        clip-path: inset(0% 0% 100% 0%);
+    }
+
+    to {
+        clip-path: inset(0 0% 0% 0);
+    }
+}
+
+@keyframes bottom {
+    from {
+        clip-path: inset(100% 0% 0% 0%);
+    }
+
+    to {
+        clip-path: inset(0 0% 0% 0);
+    }
+}
+
+@keyframes left {
+    from {
+        clip-path: inset(0% 0% 0% 100%);
+    }
+
+    to {
+        clip-path: inset(0 0% 0% 0);
+    }
+}
+
+@keyframes right {
+    from {
+        clip-path: inset(0% 100% 0% 0%);
+    }
+
+    to {
+        clip-path: inset(0 0% 0% 0);
+    }
+}

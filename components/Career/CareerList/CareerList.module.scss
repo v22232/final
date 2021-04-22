@@ -1,0 +1,12 @@
+@import '../../../styles/color.scss';
+
+.CareerList {
+    p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $white;
+        margin-bottom: 10px;
+    }
+}
