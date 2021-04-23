@@ -275,9 +275,9 @@ export default function indexPage() {
                         <div>
                             <p>Info</p>
                             <ul>
-                                <li>bu hee Kim</li>
+                                <li>Bu hee Kim</li>
                                 <li>Publisher</li>
-                                <li>Font-end developer</li>
+                                <li>Front-end developer</li>
                                 <li>bettykim3771@gmail.com</li>
                             </ul>
                         </div>
