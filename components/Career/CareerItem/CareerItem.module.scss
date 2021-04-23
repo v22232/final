@@ -30,6 +30,9 @@
             transform-style: preserve-3d;
             transition: all 0.35s;
             z-index: 2;
+            @media only screen and (max-width: $mobile) {
+                padding: 5px;
+            }
         }
 
         img {
@@ -50,7 +53,8 @@
             filter: grayscale(0%);
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             .item__gray_hover {
                 opacity: 1;
                 animation-duration: 0.7s;
@@ -69,6 +73,10 @@
         padding: 30px 20px;
         background-color: rgb(99 99 99 / 38%);
         color: $gray;
+
+        @media only screen and (max-width: $tablet) {
+            padding: 15px;
+        }
 
         h3 {
             display: inline-block;
@@ -97,6 +105,12 @@
                     left: 0px;
                 }
             }
+        }
+    }
+
+    @media only screen and (max-width: $mobile) {
+        &:last-child {
+            margin-bottom: 50px;
         }
     }
 }

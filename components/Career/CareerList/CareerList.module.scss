@@ -1,12 +1,39 @@
 @import '../../../styles/color.scss';
+@import '../../../styles/common.scss';
 
 .CareerList {
+    position: relative;
     p {
+        position: relative;
         text-align: center;
         font-size: 16px;
         font-weight: 500;
         padding-bottom: 10px;
         border-bottom: 2px solid $white;
         margin-bottom: 10px;
+        transform: rotateX(40deg);
+        @include aimateRotate(0, 2s);
+
+        &::before {
+            @include pseudo;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            opacity: 0.1;
+            top: 100%;
+            left: 0;
+            transform: rotateX(0deg);
+            @include aimateRotate(90, 1s);
+        }
+    }
+    ul {
+        transition: all 0.5s ease;
+        transform: translateY(10px);
+        overflow-y: hidden;
+        opacity: 1;
+        @media only screen and (max-width: $mobile) {
+            height: calc(100vh - 80px);
+            overflow-y: scroll;
+        }
     }
 }

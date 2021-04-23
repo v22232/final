@@ -1,4 +1,19 @@
+$tablet: '1000px';
+$mobile: '800px';
+
+
 @mixin pseudo {
     position: absolute;
     content: '';
+}
+
+
+@mixin aimateRotate($deg, $speed) {
+    animation: roate-#{$deg} $speed forwards;
+
+    @keyframes roate-#{$deg} {
+        100% {
+            transform: rotateX(#{$deg}+deg);
+        }
+    }
 }

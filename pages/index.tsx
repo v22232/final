@@ -1,7 +1,8 @@
 import CareerList from '../components/Career/CareerList';
-
+import cx from 'classnames';
 import Scramble from 'react-scramble';
 import style from '../styles/indexPage.module.scss';
+import { useState } from 'react';
 
 const CareerListData: CareerList[] = [
     {
@@ -249,8 +250,21 @@ const CareerListData: CareerList[] = [
 ];
 
 export default function indexPage() {
-    const renderCareerList = (ele: CareerList) => (
-        <CareerList key={ele.listTitle} title={ele.listTitle} list={ele.list} />
+    const [foldIndex, setFoldIndex] = useState(0);
+
+    const _onClickList = (index: number) => {
+        setFoldIndex(index);
+    };
+
+    const renderCareerList = (ele: CareerList, index: number) => (
+        <CareerList
+            key={ele.listTitle}
+            title={ele.listTitle}
+            list={ele.list}
+            index={index}
+            isActive={foldIndex === index && true}
+            onClickList={_onClickList}
+        />
     );
 
     return (
@@ -282,9 +296,10 @@ export default function indexPage() {
                             <Scramble
                                 autoStart
                                 text='PORTPOLIO'
+                                speed='slow'
                                 steps={[
                                     {
-                                        roll: 20,
+                                        roll: 10,
                                         action: '+',
                                         type: 'all',
                                     },
@@ -293,14 +308,22 @@ export default function indexPage() {
                                         type: 'forward',
                                     },
                                 ]}
-                                speed="medium"
                             />
                         </p>
                     </div>
                 </div>
             </div>
-            <div className={style.Career}>
-                <div className='group'>
+            <div className={cx(style.Career)}>
+                <div
+                    className={cx([
+                        'group',
+                        foldIndex === 0
+                            ? style.CarrerList0
+                            : foldIndex === 1
+                            ? style.CarrerList1
+                            : style.CarrerList2,
+                    ])}
+                >
                     {CareerListData.map(renderCareerList)}
                 </div>
             </div>
