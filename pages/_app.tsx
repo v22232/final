@@ -17,11 +17,11 @@ export default function App({ Component, pageProps }: AppProps) {
                     name='viewport'
                     content='user-scalable=no,width=device-width,initial-scale=1'
                 />
-                <meta name='description' content={`Vuhee's portfolio`} />
+                <meta name='description' content="Vuhee's portfolio" />
                 <meta property='og:type' content='website' />
                 <meta property='og:title' content='portfolio' />
-                <meta property='og:description' content={`Vuhee's portfolio`} />
-                <meta property='og:image' content='/images/icons/ico-logo.png' />
+                <meta property='og:description' content="Vuhee's portfolio" />
+                <meta property='og:image' content='/icons/ico-logo.png' />
                 <meta property='og:url' content='https://vuhee.vercel.app' />
 
                 <title>Vuhee's portfolio</title>
