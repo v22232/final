@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { useRouter } from 'next/dist/client/router';
 
 import style from './CareerItem.module.scss';
 
@@ -7,10 +7,18 @@ type Prop = {
 };
 export default function CareerItem({ item }: Prop) {
     const { itemTitle, url, imgPath, etc } = item;
+    const router = useRouter();
+    const _onClickItem = () => {
+        if (url) {
+            window.open(url, '_ blank');
+        } else {
+            alert('redux를 이용한 모달 상태관리 작업 중');
+        }
+    };
     return (
-        <li className={style.CareerItem}>
-            <Link href={url}>
-                <a target='_blank' title='새창열림'>
+        <>
+            <li className={style.CareerItem}>
+                <button onClick={_onClickItem}>
                     <span>{itemTitle}</span>
                     {imgPath && (
                         <>
@@ -26,9 +34,9 @@ export default function CareerItem({ item }: Prop) {
                             />
                         </>
                     )}
-                </a>
-            </Link>
-            {etc && <div>{etc}</div>}
-        </li>
+                </button>
+                {etc && <div>{etc}</div>}
+            </li>
+        </>
     );
 }

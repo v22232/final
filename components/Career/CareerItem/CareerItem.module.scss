@@ -9,7 +9,7 @@
     flex-direction: column;
     word-break: keep-all;
 
-    a {
+    button {
         position: relative;
         width: 100%;
         height: auto;
@@ -68,7 +68,7 @@
         }
     }
 
-    a ~ div {
+    button ~ div {
         width: 100%;
         padding: 30px 20px;
         background-color: rgb(99 99 99 / 38%);
