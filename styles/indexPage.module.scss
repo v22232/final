@@ -2,7 +2,7 @@
 @import './common.scss';
 
 @mixin unfold($direction) {
-    width: 20px;
+    width: 15px;
     &::before {
         @include pseudo;
         width: 100%;
@@ -122,7 +122,7 @@
                 cursor: pointer;
                 height: calc(100% - 40px);
                 perspective: 300px;
-                overflow-y: hidden;
+                overflow: hidden;
                 > div {
                     @include fold();
                     &::before {
@@ -138,8 +138,12 @@
                     }
                     &:last-of-type {
                         &::before {
-                            animation-delay: .2s;
+                            animation-delay: 0.2s;
                         }
+                    }
+
+                    & ~ div{
+                        margin-left: 5px;
                     }
                 }
 
@@ -155,8 +159,6 @@
                     > div {
                         @include fold();
                     }
-
-                    grid-template-columns: 20px calc(100% - 60px) 20px;
                     > div:nth-of-type(1) {
                         @include unfold(left);
                     }
@@ -168,7 +170,6 @@
                     > div {
                         @include fold();
                     }
-                    grid-template-columns: 20px 20px calc(100% - 60px);
                     > div:nth-of-type(1),
                     > div:nth-of-type(2) {
                         @include unfold(left);

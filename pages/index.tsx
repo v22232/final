@@ -295,7 +295,7 @@ export default function indexPage() {
                         <p>
                             <Scramble
                                 autoStart
-                                text='PORTPOLIO'
+                                text='PORTFOLIO'
                                 speed='slow'
                                 steps={[
                                     {

@@ -11,7 +11,7 @@
         padding-bottom: 10px;
         border-bottom: 2px solid $white;
         margin-bottom: 10px;
-        transform: rotateX(40deg);
+        transform: rotateX(45deg);
         @include aimateRotate(0, 2s);
 
         &::before {
@@ -23,7 +23,7 @@
             top: 100%;
             left: 0;
             transform: rotateX(0deg);
-            @include aimateRotate(90, 1s);
+            @include aimateRotate(90, 2s);
         }
     }
     ul {
